@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dea Apriani Agustin — Portofolio Web Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#about" data-nav>Tentang</a></li>
+    <li><a href="#jalan" data-nav>Perjalanan</a></li>
+    <li><a href="#proyek" data-nav>Proyek</a></li>
+    <li><a href="#skills" data-nav>Skills</a></li>
+    <li><a href="#sertif" data-nav>Sertifikat</a></li>
+    <li><a href="#kontak" data-nav>Kontak</a></li>
+  </ul>
+</nav>
+
+<div class="dock" role="navigation" aria-label="Navigasi utama">
+  <span class="dock-pill" aria-hidden="true"></span>
+  <button class="dock-btn" data-dock="about" aria-label="Tentang">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 5-7 8-7s7 2 8 7"/></svg>
+    <span>Tentang</span>
+  </button>
+  <button class="dock-btn" data-dock="proyek" aria-label="Proyek">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+    <span>Proyek</span>
+  </button>
+  <button class="dock-btn" data-dock="skills" aria-label="Skills">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-10 10H4v-6z"/><path d="M12 6l6 6"/></svg>
+    <span>Skills</span>
+  </button>
+  <button class="dock-btn" data-dock="sertif" aria-label="Sertifikat">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg>
+    <span>Sertifikat</span>
+  </button>
+  <button class="dock-btn" data-dock="kontak" aria-label="Kontak">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+    <span>Kontak</span>
+  </button>
+</div>
+
+<header id="home">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div id="fxs"></div>
+
+  <div class="hero-txt">
+    <span class="hello"><b></b>Terbuka untuk magang</span>
+    <h1>
+      <span class="w">Hai,</span>
+      <span class="w">aku</span>
+      <span class="nm">Dea Apriani Agustin</span>
+    </h1>
+    <div class="term">
+      <span class="term-text" id="role">Backend dengan Golang</span>
+      <span class="term-cursor"></span>
+    </div>
+    <p>Mahasiswa Teknik Informatika UNESA yang suka membangun API dan merancang antarmuka yang enak dipakai.</p>
+    <div class="btns">
+      <a class="btn p" href="#proyek">Lihat proyek</a>
+      <a class="btn" href="https://github.com/nagustine" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="#kontak">Kontak</a>
+    </div>
+  </div>
+
+  <svg id="rope" aria-hidden="true">
+    <path id="r1" fill="none" stroke="#E6212A" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="r2" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  <div id="card" role="img" aria-label="ID card Dea Apriani Agustin, bisa ditarik dan diayun">
+    <div class="id">
+      <div class="hole"></div>
+      <div class="id-head">
+        <span class="id-dot"></span>
+      </div>
+      <div class="av">DA</div>
+      <h3>Dea Apriani Agustin</h3>
+      <small>Web Developer</small>
+      <span class="tag">Teknik Informatika</span>
+      <div class="bar"></div>
+      <div class="tri"></div>
+      <button id="again" class="again" type="button" title="Jatuhkan lagi">↻</button>
+    </div>
+  </div>
+</header>
+
+<section class="s" id="about">
+  <div class="about">
+    <div class="photo rv rl">
+      <div class="pf" id="myphoto">
+        <svg width="84" height="84" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 5-7 8-7s7 2 8 7"/>
+        </svg>
+        <span>Tempat fotomu</span>
+      </div>
+    </div>
+    <div class="rv rr">
+      <h2><span class="h-com">//</span> Tentang aku</h2>
+      <p>Pengalaman praktisku sebagai Back End Developer datang dari program Project-Based Internship Evermos x Rakamin. Aku menguasai dasar pengembangan web dan Python, punya keahlian tambahan di UI/UX dengan Figma dan Visual Communication, cepat beradaptasi, dan suka memecahkan masalah.</p>
+      <div class="stats">
+        <div class="stat"><b data-n="3.84" data-d="2">0.00</b><span>IPK sementara</span></div>
+        <div class="stat"><b data-n="6">0</b><span>Penghargaan juara</span></div>
+        <div class="stat"><b data-n="5">0</b><span>Sertifikasi</span></div>
+        <div class="stat"><b data-n="4">0</b><span>Proyek</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="alt">
+  <section class="s" id="jalan" style="padding-top:56px;padding-bottom:56px">
+    <h2 class="rv"><span class="h-com">//</span> Perjalanan</h2>
+    <p class="sub rv">Pendidikan dan pengalaman magang.</p>
+    <div class="tl rv">
+      <div>
+        <span class="when">Agustus – September 2026</span>
+        <h3>Backend Developer · Evermos Indonesia x Rakamin</h3>
+        <small>Project-Based Internship, Remote</small>
+        <ul>
+          <li>Membangun RESTful API E-Commerce dengan Golang, MySQL, dan GitLab menggunakan Clean Architecture.</li>
+          <li>Mengimplementasikan autentikasi JWT, upload file, paginasi, filtering data, dan Data Isolation antar pengguna.</li>
+          <li>Merancang skema database relasional, termasuk log table untuk riwayat transaksi produk.</li>
+        </ul>
+      </div>
+      <div>
+        <span class="when">2025 – sekarang (Semester 3)</span>
+        <h3>S1 Teknik Informatika · Universitas Negeri Surabaya</h3>
+      </div>
+      <div>
+        <span class="when">2022 – 2025</span>
+        <h3>SMAN 2 Madiun</h3>
+        <small>Madiun, Indonesia</small>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="s" id="proyek">
+  <h2 class="rv"><span class="h-com">//</span> Proyek</h2>
+  <p class="sub rv">Klik tombol di tiap proyek untuk melihat hasilnya.</p>
+  <div class="flex-grid">
+    <article class="pj rv">
+      <div class="shot"><div><i></i><i></i><i></i></div><div class="ph">Tempat tampilan web</div></div>
+      <h3>Evermos E-Commerce API</h3>
+      <p>API lengkap dengan validasi input ketat, seluruh endpoint diuji dengan Postman.</p>
+      <div class="chips"><span class="chip">Golang</span><span class="chip">MySQL</span><span class="chip">JWT</span><span class="chip">Postman</span></div>
+      <a class="lnk" href="#">Lihat proyek</a>
+    </article>
+    <article class="pj rv">
+      <div class="shot"><div><i></i><i></i><i></i></div><div class="ph">Tempat tampilan aplikasi</div></div>
+      <h3>OurGlow – Skincare Checker</h3>
+      <p>Aplikasi mobile untuk memindai dan menganalisis komposisi produk skincare.</p>
+      <div class="chips"><span class="chip">Dart</span><span class="chip">API</span></div>
+      <a class="lnk" href="#">Lihat proyek</a>
+    </article>
+    <article class="pj rv">
+      <div class="shot"><div><i></i><i></i><i></i></div><div class="ph">Tempat tampilan web</div></div>
+      <h3>Jaga-Tubuh</h3>
+      <p>Website landing page responsif untuk kampanye kesehatan.</p>
+      <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span></div>
+      <a class="lnk" href="#">Buka web</a>
+    </article>
+    <article class="pj rv">
+      <div class="shot"><div><i></i><i></i><i></i></div><div class="ph">Tempat tampilan desain</div></div>
+      <h3>Titik Tani – UI/UX</h3>
+      <p>Desain UI/UX aplikasi yang membantu petani.</p>
+      <div class="chips"><span class="chip">Figma</span><span class="chip">UI/UX</span></div>
+      <a class="lnk" href="#">Lihat desain</a>
+    </article>
+  </div>
+</section>
+
+<div class="alt">
+  <section class="s" id="skills" style="padding-top:56px;padding-bottom:56px">
+    <h2 class="rv"><span class="h-com">//</span> Skills</h2>
+    <p class="sub rv">Teknologi yang aku pakai sehari-hari. Arahkan kursor untuk lihat detail.</p>
+    <div class="skills-wrap rv" id="skills-wrap"></div>
+    <div class="soft rv">
+      <span>Problem Solving</span>
+      <span>Kolaborasi Tim</span>
+      <span>Adaptabilitas</span>
+    </div>
+  </section>
+</div>
+
+<section class="s" id="sertif">
+  <h2 class="rv"><span class="h-com">//</span> Sertifikat</h2>
+  <p class="sub rv">Belajar terus.</p>
+  <div class="flex-grid">
+    <figure class="cert rv"><div class="ph">Foto sertifikat</div><figcaption>Web Development<small>Dibimbing · Februari 2026</small></figcaption></figure>
+    <figure class="cert rv"><div class="ph">Foto sertifikat</div><figcaption>Figma for UI/UX Design<small>MySkill · Februari 2026</small></figcaption></figure>
+    <figure class="cert rv"><div class="ph">Foto sertifikat</div><figcaption>Python Introduction for Data Analysis<small>MySkill x Lion Parcel · Februari 2026</small></figcaption></figure>
+    <figure class="cert rv"><div class="ph">Foto sertifikat</div><figcaption>Introduction to Financial Literacy<small>Dicoding Indonesia · Desember 2025</small></figcaption></figure>
+    <figure class="cert rv"><div class="ph">Foto sertifikat</div><figcaption>Computer Hardware Basics<small>Cisco Networking Academy · September 2025</small></figcaption></figure>
+  </div>
+
+  <h2 class="rv" style="margin-top:52px"><span class="h-com">//</span> Penghargaan</h2>
+  <p class="sub rv">Klik kartu untuk melihat sertifikat penghargaan.</p>
+  <div class="flex-grid" id="awards"></div>
+</section>
+
+<section class="cta" id="kontak">
+  <h2 class="rv"><span class="h-com">//</span> Kontak</h2>
+  <p class="sub rv">Hubungi aku lewat salah satu kanal di bawah ini.</p>
+  <div class="contact-grid rv">
+    <a class="contact-card" href="mailto:deayyaa16@gmail.com">
+      <span class="contact-ic" style="background:var(--blue)">✉</span>
+      <div>
+        <b>Email</b>
+        <small>deayyaa16@gmail.com</small>
+      </div>
+    </a>
+    <a class="contact-card" href="tel:08970475092">
+      <span class="contact-ic" style="background:var(--navy)">☎</span>
+      <div>
+        <b>Telepon</b>
+        <small>0897-0475-092</small>
+      </div>
+    </a>
+    <a class="contact-card" href="https://www.linkedin.com/in/dea-apriani-agustin-02868536b" target="_blank" rel="noopener">
+      <span class="contact-ic" style="background:#0A66C2">in</span>
+      <div>
+        <b>LinkedIn</b>
+        <small>dea-apriani-agustin</small>
+      </div>
+    </a>
+    <a class="contact-card" href="https://www.instagram.com/deeaayya" target="_blank" rel="noopener">
+      <span class="contact-ic" style="background:var(--teal)">◎</span>
+      <div>
+        <b>Instagram</b>
+        <small>@deeaayya</small>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer>© 2026 Dea Apriani Agustin · Madiun, Jawa Timur</footer>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close" type="button" aria-label="Tutup">×</button>
+    <div class="modal-img" id="modal-img">Foto sertifikat belum ditambahkan</div>
+    <h3 id="modal-title"></h3>
+    <p id="modal-sub"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
