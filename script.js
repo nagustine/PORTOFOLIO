@@ -163,7 +163,7 @@
   });
   document.getElementById('fxs').innerHTML = fh;
 
-  var roles = ['Backend dengan Golang', 'UI/UX dengan Figma', 'Juara desain tingkat nasional'];
+  var roles = ['Backend Developer', 'UI/UX Designer', 'Juara Desain Nasional'];
   var ri = 0;
   var rl = document.getElementById('role');
   setInterval(function(){
@@ -177,51 +177,69 @@
 
   var figmaSvg = '<svg viewBox="0 0 38 57" width="16" aria-hidden="true"><path fill="#1ABCFE" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/><path fill="#0ACF83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"/><path fill="#FF7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"/><path fill="#F24E1E" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/><path fill="#A259FF" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/></svg>';
 
-  var techList = [
+  // REVISI SKILLS BERDASARKAN KATEGORI
+  function renderTech(list, containerId) {
+    var wrap = document.getElementById(containerId);
+    var html = '';
+    list.forEach(function(t){
+      html += '<div class="tech">' +
+        '<div class="ti" style="background:' + t[2] + ';color:' + (t[3] || '#fff') + ';' +
+        (t[1].length > 2 && t[1][0] !== '<' ? 'font-size:10.5px' : '') + '">' + t[1] + '</div>' +
+        t[0] + '</div>';
+    });
+    if(wrap) wrap.innerHTML = html;
+  }
+
+  var techBackend = [
+    ['Golang','Go','#00ADD8'],
+    ['Java','J','#ED8B00'],
+    ['Python','Py','#3776AB'],
+    ['C++','C++','#00599C'],
+    ['MySQL','My','#00758F'],
+    ['SQL','SQL','#336791'],
+    ['JWT','JWT','#000'],
+    ['REST API','API','#0B5CAB']
+  ];
+
+  var techFrontend = [
     ['JavaScript','JS','#F7DF1E','#222'],
     ['TypeScript','TS','#3178C6'],
     ['HTML','5','#E34F26'],
     ['CSS','3','#1572B6'],
-    ['Golang','Go','#00ADD8'],
-    ['MySQL','My','#00758F'],
-    ['SQL','SQL','#336791'],
     ['Dart','D','#0175C2'],
-    ['Flutter','Fl','#02569B'],
-    ['Java','J','#ED8B00'],
-    ['C++','C++','#00599C'],
+    ['Flutter','Fl','#02569B']
+  ];
+
+  var techTools = [
     ['Git','◆','#F05032'],
     ['GitLab','GL','#FC6D26'],
     ['Postman','P','#FF6C37'],
-    ['Figma',figmaSvg,'#fff'],
-    ['JWT','JWT','#000'],
-    ['Python','Py','#3776AB'],
-    ['REST API','API','#0B5CAB']
+    ['Figma',figmaSvg,'#fff']
   ];
 
-  var wrap = document.getElementById('skills-wrap');
-  var html = '';
-  techList.forEach(function(t){
-    html += '<div class="tech">' +
-      '<div class="ti" style="background:' + t[2] + ';color:' + (t[3] || '#fff') + ';' +
-      (t[1].length > 2 && t[1][0] !== '<' ? 'font-size:10.5px' : '') + '">' + t[1] + '</div>' +
-      t[0] + '</div>';
-  });
-  wrap.innerHTML = html;
+  renderTech(techBackend, 'skills-backend');
+  renderTech(techFrontend, 'skills-frontend');
+  renderTech(techTools, 'skills-tools');
 
   var awardsData = [
-    { rank:3, title:'GAYATAMA Infografis Statistik Internasional', date:'Sep 2026', img:'' },
-    { rank:3, title:'Poster Competition, Universitas Setia Budi Surakarta', date:'Feb 2026', img:'' },
-    { rank:2, title:'Infografis Agromina Competition, UGM', date:'Okt 2025', img:'' },
-    { rank:1, title:'Nasional Poster, Poltekkes Surakarta', date:'Nov 2024', img:'' },
-    { rank:2, title:'Nasional Poster Dengue Fever, Universitas Indonesia', date:'Mei 2024', img:'' },
-    { rank:1, title:'Nasional Poster, Universitas Airlangga', date:'Mar 2024', img:'' }
+    { rank:3, title:'GAYATAMA Infografis Statistik Internasional (Masih Dalam Pembuatan Sertifikat)', date:'Sep 2026', img:'img/award-gayatama.jpg' },
+    { rank:3, title:'Poster Competition, Universitas Setia Budi Surakarta', date:'Feb 2026', img:'img/award-postersetiabudi.jpg' },
+    { rank:2, title:'Infografis Agromina Competition, UGM', date:'Okt 2025', img:'img/award-agromina.jpg' },
+    { rank:1, title:'Nasional Poster, Poltekkes Surakarta', date:'Nov 2024', img:'img/award-poltekkes.jpg' },
+    { rank:2, title:'Nasional Poster Dengue Fever, Universitas Indonesia', date:'Mei 2024', img:'img/award-dengue.jpg' },
+    { rank:1, title:'Nasional Poster, Universitas Airlangga', date:'Mar 2024', img:'img/award-airlangga.jpg' }
   ];
 
   var awardsEl = document.getElementById('awards');
   var aHtml = '';
+  
   awardsData.forEach(function(a, i){
+    var thumbContent = a.img 
+      ? '<img src="' + a.img + '" alt=" ">' 
+      : '#' + a.rank;
+    
     aHtml += '<button class="award" type="button" data-i="' + i + '">' +
-      '<div class="award-thumb">#' + a.rank + '</div>' +
+      '<div class="award-thumb" style="font-size:30px; font-weight:800;">' + thumbContent + '</div>' +
       '<div class="award-body">' +
         '<h4>' + a.title + '</h4>' +
         '<p>Juara ' + a.rank + ' · ' + a.date + '</p>' +
@@ -307,7 +325,6 @@
     statEls.forEach(count);
   }
 
-  /* NAVBAR HP: dock + scroll-spy */
   var dock = document.querySelector('.dock');
   var dockBtns = document.querySelectorAll('.dock-btn');
   var spyIds = ['home','about','jalan','proyek','skills','sertif','kontak'];
@@ -347,7 +364,6 @@
   }, {passive:true});
   spyDock();
 
-  /* NAVBAR HP: navbar atas (desktop) — scroll-spy */
   var navLinks = document.querySelectorAll('nav [data-nav]');
   var navSections = Array.prototype.map.call(navLinks, function(a){
     return document.querySelector(a.getAttribute('href'));
